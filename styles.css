@@ -1,0 +1,152 @@
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--off-white);
+    font-family: "Poppins", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-wrapper {
+    background-color: white;
+    width: 90%;
+    margin-top: 100px;
+    max-width: 360px;
+    border-radius: 15px;
+    border-bottom-right-radius: 25%;
+}
+
+.card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#entries {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+}
+
+.entry-label {
+    font-size: 13px;
+    color: var(--smokey-grey);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.entry-input {
+    font-size: 20px;
+    font-weight: 700;
+    width: 80px;
+    border: 1px solid var(--smokey-grey);
+    border-radius: 10%;
+    line-height: 50px;
+    padding-left: 15px;
+}
+
+.red {
+    color: var(--light-red);
+}
+
+.red-border {
+    border: 1px solid var(--light-red);
+}
+
+.entry-input:active {
+    border: 1px solid var(--purple);
+}
+
+.message {
+    font-size: 8px;
+    font-style: italic;
+    color: var(--light-red);
+}
+
+#separator {
+    display: flex;
+}
+
+.divider {
+    margin-top: 20px;
+    height: 2px;
+    width: 125px;
+    background-color: var(--off-white);
+}
+
+#arrow-icon {
+    width: 30px;
+    height: 30px;
+}
+
+#calc-btn {
+    background-color: var(--purple);
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+}
+
+.result {
+    font-size: 50px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--off-black);
+    margin: 0;
+}
+
+.answer {
+    color: var(--purple);
+}
+
+.attribution {
+    margin-top: 50px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+    .content-wrapper {
+        max-width: 525px;
+    }
+
+    .entry-input {
+        width: 100px;
+    }
+
+    #calc-btn {
+        order: 1;
+    }
+
+    .divider {
+        width: 200px;
+    }
+}
